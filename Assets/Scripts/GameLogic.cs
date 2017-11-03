@@ -3,23 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
+	
+
+
+	private bool beginningOfScale = true;
+	private GameObject[] buttons = GameObject.FindGameObjectsWithTag ("Note");
+	//private Button buttonScript = buttons.GetComponents<Button> ();
+
 
 	// Use this for initialization
 	void Start () {
-		
+
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (beginningOfScale) {
+			for (int i = 0; i < buttons.Length; i++) {
+				
+			} 
+		}
 	}
-
-	//variable was button pressed;
-	//vairable are we at the beginning of the scale;
-
-	//variable array of all notes [];
-	//variable array all notes in reverse[];
-
+		
 	//void methord(){
 
 		//if(beginning of scale);{
