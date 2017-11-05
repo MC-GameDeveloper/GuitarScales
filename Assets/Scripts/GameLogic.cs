@@ -3,42 +3,102 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
-	
 
+	public GameObject noteOnSixthRef;
+	public GameObject secondNoteRef;
+	public GameObject thirdNoteRef;
+	public GameObject fourthNoteRef;
+	public GameObject fifthNoteRef;
+	public GameObject rootRef;
+	public GameObject seventhNoteRef;
+	public GameObject eigthNoteRef;
+	public GameObject ninthNoteRef;
+	public GameObject tenthNoteRef;
+	public GameObject rootTwoRef;
+	public GameObject twelthNoteRef;
 
-	private bool beginningOfScale = true;
-	private GameObject[] buttons = GameObject.FindGameObjectsWithTag ("Note");
-	//private Button buttonScript = buttons.GetComponents<Button> ();
-
-
-	// Use this for initialization
 	void Start () {
-
-	
+		
+		NoteOnSixthPlay ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (beginningOfScale) {
-			for (int i = 0; i < buttons.Length; i++) {
-				
-			} 
+
+	void Update(){
+
+		if (noteOnSixthRef == null) {
+			SecondNotePlay ();
+			Debug.Log ("note Destroyed");
+		} else if (secondNoteRef == null) {
+			ThirdNotePlay ();
+		}else if (thirdNoteRef == null) {
+			FourthNotePlay ();
+		}else if (fourthNoteRef == null) {
+			FifthNotePlay ();
+		}else if (fifthNoteRef == null) {
+			RootNotePlay ();
+		}else if (rootRef == null) {
+			SeventhNotePlay ();
+		}else if (seventhNoteRef == null) {
+			EigthNotePlay ();
+		}else if (eigthNoteRef == null) {
+			NinthNotePlay ();
+		}else if (ninthNoteRef == null) {
+			TenthNotePlay ();
+		}else if (tenthNoteRef== null) {
+			RootTwoNotePlay ();
+		}else if (rootTwoRef == null) {
+			TwelthNotePlay ();
+		}else if (twelthNoteRef == null) {
+			NoteOnSixthPlay ();
 		}
 	}
 		
-	//void methord(){
+	void NoteOnSixthPlay(){
+		
+		Instantiate (noteOnSixthRef);
+	}
 
-		//if(beginning of scale);{
-			//foreach...
-			//get index of button just pressed then work turn off renderer and enable renderer of i++
-			//set beginning of scale to false
-		//}
+	void SecondNotePlay(){
+		
+		Instantiate (secondNoteRef);
+	}
+	void ThirdNotePlay(){
 
-		//elseif(not at beginning of scale){
-			//foreach...	
-			//use reverse array and turn on and off renderers
-			//set beginning of scale to true
-		//}
+		Instantiate (thirdNoteRef);
+	}
+	void FourthNotePlay(){
 
-	//}
+		Instantiate (fourthNoteRef);
+	}
+	void FifthNotePlay(){
+
+		Instantiate (fifthNoteRef);
+	}
+	void RootNotePlay(){
+
+		Instantiate (rootRef);
+	}
+	void SeventhNotePlay(){
+
+		Instantiate (seventhNoteRef);
+	}
+	void EigthNotePlay(){
+
+		Instantiate (eigthNoteRef);
+	}
+	void NinthNotePlay(){
+
+		Instantiate (ninthNoteRef);
+	}
+	void TenthNotePlay(){
+
+		Instantiate (tenthNoteRef);
+	}
+	void RootTwoNotePlay(){
+
+		Instantiate (rootTwoRef);
+	}
+	void TwelthNotePlay(){
+
+		Instantiate (twelthNoteRef);
+	}
 }
