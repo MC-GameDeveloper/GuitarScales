@@ -12,7 +12,7 @@ public class TouchInput : MonoBehaviour {
 
 #if UNITY_EDITOR
 
-	if (Input.GetMouseButton(0)) {
+	if (Input.GetMouseButtonDown(0)) {
 			//Debug.Log("Pressed");
 
 		Ray ray = GetComponent<Camera> ().ScreenPointToRay (Input.mousePosition);﻿
@@ -21,7 +21,7 @@ public class TouchInput : MonoBehaviour {
 			GameObject recipient = hit.transform.gameObject;
 			//Debug.Log("Hit");
 
-			if (Input.GetMouseButton(0)) {
+			if (Input.GetMouseButtonDown(0)) {
 				recipient.SendMessage ("OnTouchDown", hit.point, SendMessageOptions.DontRequireReceiver);
 					//Debug.Log("Message Sent"); 
 			}

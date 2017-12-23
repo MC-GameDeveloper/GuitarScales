@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
 
-	private AudioSource audio; 
+	private AudioSource audio;
 	private Renderer rend;
-
+	public GameStructure gameStructureRef;
 	void Start(){
 
 		audio = GetComponent<AudioSource>();
 		rend = GetComponent<Renderer> ();
-		rend.enabled = true;
+
 	}
 
 	void OnTouchDown(){
-		
 		audio.Play ();
-		//Debug.Log ("Music!");
-		rend.enabled = false;
+		if (rend.enabled == true) {
+			gameStructureRef.NextState ();
+		}
 	}
 }
